@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.vicente.paint.MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <view
+        android:id="@+id/lienzo"
+        class="com.example.vicente.paint.VistaPintada"
+        id="@+id/view"
+        android:layout_width="384dp"
+        android:layout_height="419dp"
+        app:layout_constraintBottom_toTopOf="@+id/btPincel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btGoma"
+        android:layout_width="86dp"
+        android:layout_height="47dp"
+        android:text="Goma"
+        android:textOff="Goma"
+        android:textOn="Goma"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btVaciar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btPincel" />
+
+    <Button
+        android:id="@+id/btPincel"
+        android:layout_width="86dp"
+        android:layout_height="47dp"
+        android:text="Pincel"
+        android:textOff="Pincel"
+        android:textOn="Pincel"
+        app:layout_constraintBottom_toTopOf="@+id/btGoma"
+        app:layout_constraintEnd_toStartOf="@+id/btColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lienzo" />
+
+
+    <Button
+        android:id="@+id/btVaciar"
+        android:layout_width="86dp"
+        android:layout_height="47dp"
+        android:text="Vaciar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btMenos"
+        app:layout_constraintStart_toEndOf="@+id/btGoma"
+        app:layout_constraintTop_toBottomOf="@+id/btPincel" />
+
+    <Button
+        android:id="@+id/btCirculo"
+        android:layout_width="86dp"
+        android:layout_height="47dp"
+        android:text="Circulo"
+        android:textOff="Circulo"
+        android:textOn="Circulo"
+        app:layout_constraintBottom_toTopOf="@+id/btMas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btLinea"
+        app:layout_constraintTop_toBottomOf="@+id/lienzo" />
+
+    <Button
+        android:id="@+id/btLinea"
+        android:layout_width="86dp"
+        android:layout_height="47dp"
+        android:text="Linea"
+        android:textOff="Linea"
+        android:textOn="Linea"
+        app:layout_constraintBottom_toTopOf="@+id/btMenos"
+        app:layout_constraintEnd_toStartOf="@+id/btCirculo"
+        app:layout_constraintStart_toEndOf="@+id/btColor"
+        app:layout_constraintTop_toBottomOf="@+id/lienzo" />
+
+    <Button
+        android:id="@+id/btColor"
+        android:layout_width="86dp"
+        android:layout_height="47dp"
+        android:text="Color"
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintBottom_toTopOf="@+id/btVaciar"
+        app:layout_constraintEnd_toStartOf="@+id/btLinea"
+        app:layout_constraintStart_toEndOf="@+id/btPincel"
+        app:layout_constraintTop_toBottomOf="@+id/lienzo" />
+
+    <Button
+        android:id="@+id/btMenos"
+        android:layout_width="40dp"
+        android:layout_height="47dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvSize"
+        app:layout_constraintStart_toEndOf="@+id/btVaciar"
+        app:layout_constraintTop_toBottomOf="@+id/btLinea" />
+
+    <Button
+        android:id="@+id/btMas"
+        android:layout_width="40dp"
+        android:layout_height="47dp"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvSize"
+        app:layout_constraintTop_toBottomOf="@+id/btCirculo" />
+
+    <TextView
+        android:id="@+id/tvSize"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="9dp"
+        android:text="10"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btMas"
+        app:layout_constraintStart_toEndOf="@+id/btMenos"
+        app:layout_constraintTop_toBottomOf="@+id/btCirculo" />
+
+</android.support.constraint.ConstraintLayout>
